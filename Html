@@ -1,0 +1,1106 @@
+
+<!-- Replace with: <img src="employee1-image-url.jpg" alt="Employee Name" class="w-full h-full object-cover rounded-2xl" /> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Kumar - Founder & CEO | Trackmap Innovations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .corporate-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 25%, #1e40af 50%, #312e81 75%, #1e3a8a 100%);
+        }
+        
+        .professional-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .corporate-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .floating-animation {
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(1deg); }
+            50% { transform: translateY(-25px) rotate(0deg); }
+            75% { transform: translateY(-10px) rotate(-1deg); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .professional-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .professional-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .professional-card:hover::before {
+            left: 100%;
+        }
+        
+        .professional-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+        
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover::after {
+            left: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .section-padding {
+            padding: 120px 0;
+            margin-bottom: 0;
+            position: relative;
+        }
+        
+        section {
+            clear: both;
+            display: block;
+        }
+        
+        .corporate-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .corporate-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+        
+        .stats-counter {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #3b82f6;
+        }
+        
+        .professional-icon {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+        
+        .company-logo {
+            background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+            box-shadow: 0 15px 35px rgba(30, 64, 175, 0.4);
+        }
+        
+        @keyframes slideInFromLeft {
+            0% { transform: translateX(-100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes slideInFromRight {
+            0% { transform: translateX(100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        
+        .slide-left {
+            animation: slideInFromLeft 1s ease-out;
+        }
+        
+        .slide-right {
+            animation: slideInFromRight 1s ease-out;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .corporate-shadow {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-[100] bg-gray-900 bg-opacity-95 backdrop-blur-lg border-b border-gray-700 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 company-logo rounded-xl flex items-center justify-center text-white font-bold text-xl">TM</div>
+                    <div>
+                        <div class="text-xl font-bold gradient-text">Vishal Kumar</div>
+                        <div class="text-xs text-gray-400 font-medium">Founder & CEO</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link hover:text-blue-400 transition-colors text-shadow">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-400 transition-colors text-shadow">About</a>
+                    <a href="#education" class="nav-link hover:text-blue-400 transition-colors text-shadow">Education</a>
+                    <a href="#skills" class="nav-link hover:text-blue-400 transition-colors text-shadow">Expertise</a>
+                    <a href="#employees" class="nav-link hover:text-blue-400 transition-colors text-shadow">Team</a>
+                    <a href="#company" class="nav-link hover:text-blue-400 transition-colors text-shadow">Company</a>
+                    <a href="#contact" class="nav-link hover:text-blue-400 transition-colors text-shadow">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg glass-effect">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden glass-effect">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 hover:text-purple-400 transition-colors">Home</a>
+                <a href="#about" class="block px-3 py-2 hover:text-purple-400 transition-colors">About</a>
+                <a href="#education" class="block px-3 py-2 hover:text-purple-400 transition-colors">Education</a>
+                <a href="#skills" class="block px-3 py-2 hover:text-purple-400 transition-colors">Skills</a>
+                <a href="#employees" class="block px-3 py-2 hover:text-purple-400 transition-colors">Team</a>
+                <a href="#company" class="block px-3 py-2 hover:text-purple-400 transition-colors">Company</a>
+                <a href="#contact" class="block px-3 py-2 hover:text-purple-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen corporate-gradient flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+            <div class="absolute top-40 right-20 w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"></div>
+            <div class="absolute bottom-20 left-1/2 w-96 h-96 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-4000"></div>
+        </div>
+        
+        <!-- Professional Grid Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="w-full h-full" style="background-image: radial-gradient(circle, #3b82f6 1px, transparent 1px); background-size: 50px 50px;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center min-h-screen">
+                <!-- Left Side - Content -->
+                <div class="fade-in text-left">
+                    <div class="mb-8">
+                        <div class="text-lg font-semibold text-blue-400 mb-2 tracking-wider">WELCOME TO THE FUTURE</div>
+                        <h1 class="text-5xl md:text-7xl font-black mb-4 text-shadow">
+                            <span class="gradient-text">VISHAL KUMAR</span>
+                        </h1>
+                        <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mb-6"></div>
+                    </div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white">
+                        Founder & Chief Executive Officer
+                    </h2>
+                    <h3 class="text-xl md:text-2xl font-medium mb-8 text-blue-300">
+                        Trackmap Innovations Private Limited
+                    </h3>
+                    
+                    <div class="mb-12">
+                        <p class="text-lg md:text-xl leading-relaxed text-gray-200 mb-6">
+                            Welcome to Trackmap Innovations Private Limited. Founded by Vishal Kumar, our company is driven by a vision to bring innovative ideas into reality and create impactful solutions for modern challenges.
+                        </p>
+                        
+                        <p class="text-lg md:text-xl leading-relaxed text-gray-200 mb-6">
+                            We believe in combining creativity, technology, and practical strategies to design products and services that make life simpler, smarter, and more efficient.
+                        </p>
+                        
+                        <div class="bg-gradient-to-r from-blue-900 to-indigo-900 rounded-2xl p-6 mb-8 border border-blue-700">
+                            <h4 class="text-xl font-bold text-blue-300 mb-4">At Trackmap Innovations, our mission is to:</h4>
+                            <ul class="space-y-3 text-gray-200">
+                                <li class="flex items-start">
+                                    <span class="text-blue-400 mr-3">•</span>
+                                    <span>Foster innovation through research and creative thinking</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-400 mr-3">•</span>
+                                    <span>Build solutions that are reliable, user-friendly, and sustainable</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-blue-400 mr-3">•</span>
+                                    <span>Create opportunities for growth, learning, and collaboration</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <p class="text-lg md:text-xl leading-relaxed text-gray-200 font-semibold">
+                            We are passionate about shaping the future with innovation, dedication, and excellence.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#about" class="corporate-button text-white px-8 py-4 rounded-2xl font-bold text-lg tracking-wide">DISCOVER MORE</a>
+                        <a href="#company" class="glass-effect px-8 py-4 rounded-2xl font-bold text-lg tracking-wide hover:bg-white hover:bg-opacity-10 transition-all transform hover:scale-105 corporate-shadow">OUR COMPANY</a>
+                        <a href="#contact" class="border-2 border-blue-400 px-8 py-4 rounded-2xl font-bold text-lg tracking-wide hover:bg-blue-400 hover:text-gray-900 transition-all transform hover:scale-105">CONTACT</a>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Image -->
+                <div class="fade-in flex justify-center lg:justify-end">
+                    <div class="w-96 h-96 lg:w-[500px] lg:h-[500px] rounded-3xl bg-gradient-to-br from-blue-100 to-cyan-100 p-3 floating-animation shadow-2xl border-4 border-white">
+                        <div class="w-full h-full rounded-2xl bg-gradient-to-br from-white to-gray-50 flex items-center justify-center overflow-hidden shadow-inner">
+                            <img src="image.jpeg" alt="Vishal Kumar - Founder & CEO" class="w-full h-full object-cover rounded-2xl" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                            <div class="text-center text-gray-400 hidden">
+                                <div class="text-8xl mb-4">👤</div>
+                                <div class="text-lg font-semibold">Image Loading...</div>
+                                <div class="text-sm mt-2">Professional Portrait</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-gradient-to-br from-slate-50 to-blue-50 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 fade-in">
+                <div class="text-lg font-semibold text-blue-600 mb-4 tracking-wider">PROFESSIONAL BACKGROUND</div>
+                <h2 class="text-5xl md:text-6xl font-black mb-8 text-gray-800">About Me</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <div class="w-80 h-80 mx-auto rounded-3xl bg-gradient-to-br from-blue-400 to-cyan-500 p-2 shadow-2xl">
+                        <div class="w-full h-full rounded-2xl bg-white flex items-center justify-center overflow-hidden shadow-inner">
+                            <img src="image.jpeg" alt="Vishal Kumar - Professional Portrait" class="w-full h-full object-cover rounded-2xl" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                            <div class="text-center text-gray-400 hidden">
+                                <div class="text-8xl mb-4">🎓</div>
+                                <div class="text-lg font-semibold">Image Loading...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-blue-100">
+                        <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                            My name is Vishal Kumar, and I am passionate about learning, personal growth, and contributing positively to society. I completed my 10th from RAJ High School (First Division), then 12th in PCM stream from RAJ Inter College (First Division). Later, I graduated from MJK College, Bettiah with Economics (Honours, Second Division).
+                        </p>
+                        <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                            Currently, I am pursuing a Bachelor of Education (B.Ed.) 1st year to strengthen my knowledge and skills in the field of education. My goal is to become a dedicated educator who can inspire and guide students towards excellence.
+                        </p>
+                        <p class="text-lg leading-relaxed text-gray-700">
+                            I strongly believe in hard work, discipline, and continuous learning, which are the keys to success in both personal and professional life.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding bg-white relative z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 fade-in">
+                <div class="text-lg font-semibold text-blue-600 mb-4 tracking-wider">ACADEMIC JOURNEY</div>
+                <h2 class="text-5xl md:text-6xl font-black mb-8 text-gray-800">Education</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+            </div>
+            <div class="space-y-8">
+                <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-8 fade-in hover:shadow-xl transition-all border border-blue-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-3xl mr-6 shadow-lg">🎓</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">Bachelor of Education (B.Ed.)</h3>
+                            <p class="text-blue-600 font-medium">Blooming Buds Inter Degree College, Maniram</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-3xl p-8 fade-in hover:shadow-xl transition-all border border-emerald-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center text-3xl mr-6 shadow-lg">📊</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">B.A. in Economics (Honours)</h3>
+                            <p class="text-emerald-600 font-medium">MJK College, West Champaran (2nd Division)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl p-8 fade-in hover:shadow-xl transition-all border border-purple-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-3xl mr-6 shadow-lg">🔬</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">Intermediate by Science (PCM)</h3>
+                            <p class="text-purple-600 font-medium">RAJ Inter College, Bettiah (1st Division)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-3xl p-8 fade-in hover:shadow-xl transition-all border border-orange-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center text-3xl mr-6 shadow-lg">📚</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800">Matriculation</h3>
+                            <p class="text-orange-600 font-medium">RAJ High School, Bettiah (1st Division)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-gradient-to-br from-gray-50 to-slate-100 relative z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 fade-in">
+                <div class="text-lg font-semibold text-blue-600 mb-4 tracking-wider">CORE COMPETENCIES</div>
+                <h2 class="text-5xl md:text-6xl font-black mb-8 text-gray-800">Professional Expertise</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+                <p class="text-xl text-gray-600 mt-8 max-w-3xl mx-auto">
+                    Leveraging diverse skills across technology, business leadership, and digital innovation to drive transformative solutions.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="professional-card bg-white rounded-3xl p-10 text-center fade-in shadow-xl border border-blue-100">
+                    <div class="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-5xl mx-auto mb-8 floating-animation shadow-lg">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Executive Leadership</h3>
+                    <div class="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-6"></div>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Founder & Chief Executive Officer at Trackmap Innovations Pvt. Ltd., driving strategic vision and operational excellence.
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="px-3 py-1 bg-blue-100 rounded-full text-xs font-medium text-blue-600">Strategy</span>
+                        <span class="px-3 py-1 bg-blue-100 rounded-full text-xs font-medium text-blue-600">Innovation</span>
+                    </div>
+                </div>
+                
+                <div class="professional-card bg-white rounded-3xl p-10 text-center fade-in shadow-xl border border-red-100">
+                    <div class="w-24 h-24 bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl flex items-center justify-center text-5xl mx-auto mb-8 floating-animation shadow-lg">📺</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Digital Media Management</h3>
+                    <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-pink-500 mx-auto mb-6"></div>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Strategic management of THE FAKIR & ASLI FAKIR YouTube channels, building engaged communities and content strategies.
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="px-3 py-1 bg-red-100 rounded-full text-xs font-medium text-red-600">YouTube</span>
+                        <span class="px-3 py-1 bg-red-100 rounded-full text-xs font-medium text-red-600">Analytics</span>
+                    </div>
+                </div>
+                
+                <div class="professional-card bg-white rounded-3xl p-10 text-center fade-in shadow-xl border border-purple-100">
+                    <div class="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-5xl mx-auto mb-8 floating-animation shadow-lg">📱</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Creative Content Strategy</h3>
+                    <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Creative direction and content creation for KKC EDITS on Instagram, specializing in visual storytelling and brand development.
+                    </p>
+                    <div class="flex justify-center space-x-2">
+                        <span class="px-3 py-1 bg-purple-100 rounded-full text-xs font-medium text-purple-600">Instagram</span>
+                        <span class="px-3 py-1 bg-purple-100 rounded-full text-xs font-medium text-purple-600">Branding</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Skills Grid -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 fade-in">
+                <div class="text-center p-6 bg-white rounded-2xl shadow-lg border border-blue-100">
+                    <div class="text-3xl mb-3">🎯</div>
+                    <div class="font-semibold text-gray-700">Strategic Planning</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-2xl shadow-lg border border-green-100">
+                    <div class="text-3xl mb-3">💡</div>
+                    <div class="font-semibold text-gray-700">Innovation Management</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-2xl shadow-lg border border-purple-100">
+                    <div class="text-3xl mb-3">📊</div>
+                    <div class="font-semibold text-gray-700">Business Development</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-2xl shadow-lg border border-cyan-100">
+                    <div class="text-3xl mb-3">🌐</div>
+                    <div class="font-semibold text-gray-700">Digital Transformation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employees Section -->
+    <section id="employees" class="section-padding bg-gradient-to-br from-slate-50 to-gray-100 relative z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 fade-in">
+                <div class="text-lg font-semibold text-blue-600 mb-4 tracking-wider">OUR TEAM</div>
+                <h2 class="text-5xl md:text-6xl font-black mb-8 text-gray-800">Meet Our Employees</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+                <p class="text-xl text-gray-600 mt-8 max-w-3xl mx-auto">
+                    Our dedicated team of professionals driving innovation and excellence at Trackmap Innovations.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
+                <!-- Employee 1 -->
+                <div class="professional-card bg-white rounded-3xl p-8 shadow-xl border border-blue-100 fade-in">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Image Placeholder -->
+                        <div class="w-48 h-48 rounded-3xl bg-gradient-to-br from-blue-400 to-cyan-500 p-2 mb-8 shadow-xl">
+                            <div class="w-full h-full rounded-2xl bg-white flex items-center justify-center overflow-hidden">
+                                <div class="text-center text-gray-400">
+                                    <div class="text-6xl mb-2">👨‍💼</div>
+                                    <div class="text-sm font-semibold">Employee Photo</div>
+                                </div>
+                                <!-- Replace with: <img src="employee1-image-url.jpg" alt="Employee Name" class="w-full h-full object-cover rounded-2xl" /> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Employee Details -->
+                        <div class="w-full">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Employee Name 1</h3>
+                            <div class="text-lg font-semibold text-blue-600 mb-4">Senior Developer</div>
+                            <div class="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-6"></div>
+                            
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                Experienced software developer specializing in mobile app development and GPS navigation systems. Leading the technical development of TrackMap platform.
+                            </p>
+                            
+                            <!-- Skills Tags -->
+                            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-blue-100 rounded-full text-xs font-medium text-blue-600">React Native</span>
+                                <span class="px-3 py-1 bg-blue-100 rounded-full text-xs font-medium text-blue-600">GPS Systems</span>
+                                <span class="px-3 py-1 bg-blue-100 rounded-full text-xs font-medium text-blue-600">Backend</span>
+                            </div>
+                            
+                            <!-- Contact Info -->
+                            <div class="space-y-2 text-sm text-gray-500">
+                                <div class="flex items-center justify-center">
+                                    <span class="mr-2">📧</span>
+                                    <span>employee1@trackmapinnovations.com</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <span class="mr-2">📱</span>
+                                    <span>+91 XXXXXXXXXX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Employee 2 -->
+                <div class="professional-card bg-white rounded-3xl p-8 shadow-xl border border-green-100 fade-in">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Image Placeholder -->
+                        <div class="w-48 h-48 rounded-3xl bg-gradient-to-br from-green-400 to-emerald-500 p-2 mb-8 shadow-xl">
+                            <div class="w-full h-full rounded-2xl bg-white flex items-center justify-center overflow-hidden">
+                                <div class="text-center text-gray-400">
+                                    <div class="text-6xl mb-2">👩‍💼</div>
+                                    <div class="text-sm font-semibold">Employee Photo</div>
+                                </div>
+                                <!-- Replace with: <img src="employee2-image-url.jpg" alt="Employee Name" class="w-full h-full object-cover rounded-2xl" /> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Employee Details -->
+                        <div class="w-full">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Employee Name 2</h3>
+                            <div class="text-lg font-semibold text-green-600 mb-4">UI/UX Designer</div>
+                            <div class="w-16 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto mb-6"></div>
+                            
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                Creative designer focused on user experience and interface design. Responsible for creating intuitive and accessible designs for the TrackMap application.
+                            </p>
+                            
+                            <!-- Skills Tags -->
+                            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-green-100 rounded-full text-xs font-medium text-green-600">Figma</span>
+                                <span class="px-3 py-1 bg-green-100 rounded-full text-xs font-medium text-green-600">UI Design</span>
+                                <span class="px-3 py-1 bg-green-100 rounded-full text-xs font-medium text-green-600">Prototyping</span>
+                            </div>
+                            
+                            <!-- Contact Info -->
+                            <div class="space-y-2 text-sm text-gray-500">
+                                <div class="flex items-center justify-center">
+                                    <span class="mr-2">📧</span>
+                                    <span>employee2@trackmapinnovations.com</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <span class="mr-2">📱</span>
+                                    <span>+91 XXXXXXXXXX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Employee 3 -->
+                <div class="professional-card bg-white rounded-3xl p-8 shadow-xl border border-purple-100 fade-in">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Image Placeholder -->
+                        <div class="w-48 h-48 rounded-3xl bg-gradient-to-br from-purple-400 to-pink-500 p-2 mb-8 shadow-xl">
+                            <div class="w-full h-full rounded-2xl bg-white flex items-center justify-center overflow-hidden">
+                                <div class="text-center text-gray-400">
+                                    <div class="text-6xl mb-2">👨‍💻</div>
+                                    <div class="text-sm font-semibold">Employee Photo</div>
+                                </div>
+                                <!-- Replace with: <img src="employee3-image-url.jpg" alt="Employee Name" class="w-full h-full object-cover rounded-2xl" /> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Employee Details -->
+                        <div class="w-full">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Employee Name 3</h3>
+                            <div class="text-lg font-semibold text-purple-600 mb-4">Data Analyst</div>
+                            <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+                            
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                Data specialist analyzing railway traffic patterns and user behavior to optimize navigation algorithms and improve platform performance.
+                            </p>
+                            
+                            <!-- Skills Tags -->
+                            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-purple-100 rounded-full text-xs font-medium text-purple-600">Python</span>
+                                <span class="px-3 py-1 bg-purple-100 rounded-full text-xs font-medium text-purple-600">Analytics</span>
+                                <span class="px-3 py-1 bg-purple-100 rounded-full text-xs font-medium text-purple-600">Machine Learning</span>
+                            </div>
+                            
+                            <!-- Contact Info -->
+                            <div class="space-y-2 text-sm text-gray-500">
+                                <div class="flex items-center justify-center">
+                                    <span class="mr-2">📧</span>
+                                    <span>employee3@trackmapinnovations.com</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <span class="mr-2">📱</span>
+                                    <span>+91 XXXXXXXXXX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Employee 4 -->
+                <div class="professional-card bg-white rounded-3xl p-8 shadow-xl border border-orange-100 fade-in">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Image Placeholder -->
+                        <div class="w-48 h-48 rounded-3xl bg-gradient-to-br from-orange-400 to-red-500 p-2 mb-8 shadow-xl">
+                            <div class="w-full h-full rounded-2xl bg-white flex items-center justify-center overflow-hidden">
+                                <div class="text-center text-gray-400">
+                                    <div class="text-6xl mb-2">👩‍💻</div>
+                                    <div class="text-sm font-semibold">Employee Photo</div>
+                                </div>
+                                <!-- Replace with: <img src="employee4-image-url.jpg" alt="Employee Name" class="w-full h-full object-cover rounded-2xl" /> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Employee Details -->
+                        <div class="w-full">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Employee Name 4</h3>
+                            <div class="text-lg font-semibold text-orange-600 mb-4">Marketing Manager</div>
+                            <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mb-6"></div>
+                            
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                Strategic marketing professional responsible for brand development, digital marketing campaigns, and user acquisition for TrackMap platform.
+                            </p>
+                            
+                            <!-- Skills Tags -->
+                            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                                <span class="px-3 py-1 bg-orange-100 rounded-full text-xs font-medium text-orange-600">Digital Marketing</span>
+                                <span class="px-3 py-1 bg-orange-100 rounded-full text-xs font-medium text-orange-600">SEO</span>
+                                <span class="px-3 py-1 bg-orange-100 rounded-full text-xs font-medium text-orange-600">Brand Strategy</span>
+                            </div>
+                            
+                            <!-- Contact Info -->
+                            <div class="space-y-2 text-sm text-gray-500">
+                                <div class="flex items-center justify-center">
+                                    <span class="mr-2">📧</span>
+                                    <span>employee4@trackmapinnovations.com</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <span class="mr-2">📱</span>
+                                    <span>+91 XXXXXXXXXX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Stats -->
+            <div class="mt-20 fade-in">
+                <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-200">
+                    <h3 class="text-3xl font-bold text-center mb-12 gradient-text">Team Statistics</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-blue-600 mb-2">4+</div>
+                            <div class="text-sm text-gray-600 font-medium">TEAM MEMBERS</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-green-600 mb-2">5+</div>
+                            <div class="text-sm text-gray-600 font-medium">YEARS EXPERIENCE</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-purple-600 mb-2">10+</div>
+                            <div class="text-sm text-gray-600 font-medium">PROJECTS COMPLETED</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-orange-600 mb-2">100%</div>
+                            <div class="text-sm text-gray-600 font-medium">DEDICATION</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section id="company" class="section-padding bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden z-50">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="w-full h-full" style="background-image: linear-gradient(45deg, #3b82f6 25%, transparent 25%), linear-gradient(-45deg, #3b82f6 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #3b82f6 75%), linear-gradient(-45deg, transparent 75%, #3b82f6 75%); background-size: 60px 60px; background-position: 0 0, 0 30px, 30px -30px, -30px 0px;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20 fade-in">
+                <div class="text-lg font-semibold text-blue-600 mb-4 tracking-wider">ENTERPRISE OVERVIEW</div>
+                <h2 class="text-5xl md:text-6xl font-black mb-8 text-gray-800">Our Company</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-8 md:p-16 shadow-2xl border border-blue-200">
+                <!-- Company Header -->
+                <div class="text-center mb-16 fade-in">
+                    <div class="w-32 h-32 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center text-5xl mx-auto mb-8 floating-animation shadow-xl">
+                        🗺️
+                    </div>
+                    <h3 class="text-4xl md:text-5xl font-black mb-6 text-gray-800">TRACKMAP INNOVATIONS</h3>
+                    <div class="text-2xl font-bold text-blue-600 mb-4">PRIVATE LIMITED</div>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        Pioneering the future of railway navigation through cutting-edge GPS technology and innovative digital solutions that transform the travel experience for millions across India.
+                    </p>
+                </div>
+                
+                <!-- Company Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 fade-in">
+                    <div class="text-center p-6 bg-blue-50 rounded-2xl border border-blue-200">
+                        <div class="text-3xl font-black text-blue-600 mb-2">2025</div>
+                        <div class="text-sm text-gray-600 font-medium">INCORPORATED</div>
+                    </div>
+                    <div class="text-center p-6 bg-green-50 rounded-2xl border border-green-200">
+                        <div class="text-3xl font-black text-green-600 mb-2">₹10L</div>
+                        <div class="text-sm text-gray-600 font-medium">AUTH. CAPITAL</div>
+                    </div>
+                    <div class="text-center p-6 bg-purple-50 rounded-2xl border border-purple-200">
+                        <div class="text-3xl font-black text-purple-600 mb-2">₹1L</div>
+                        <div class="text-sm text-gray-600 font-medium">PAID CAPITAL</div>
+                    </div>
+                    <div class="text-center p-6 bg-orange-50 rounded-2xl border border-orange-200">
+                        <div class="text-3xl font-black text-orange-600 mb-2">BR</div>
+                        <div class="text-sm text-gray-600 font-medium">BIHAR BASED</div>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-16 mb-16">
+                    <!-- Company Details -->
+                    <div class="fade-in">
+                        <h4 class="text-3xl font-bold mb-8 gradient-text">Corporate Information</h4>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center p-4 glass-effect rounded-xl">
+                                <span class="text-gray-400 font-medium">Corporate Identity Number</span>
+                                <span class="font-bold text-blue-300">U74909BR2025PTC075493</span>
+                            </div>
+                            <div class="flex justify-between items-center p-4 glass-effect rounded-xl">
+                                <span class="text-gray-400 font-medium">Incorporation Date</span>
+                                <span class="font-bold text-blue-300">24 April 2025</span>
+                            </div>
+                            <div class="flex justify-between items-center p-4 glass-effect rounded-xl">
+                                <span class="text-gray-400 font-medium">Business Classification</span>
+                                <span class="font-bold text-blue-300">Mobile App Development</span>
+                            </div>
+                            <div class="flex justify-between items-center p-4 glass-effect rounded-xl">
+                                <span class="text-gray-400 font-medium">Industry Sector</span>
+                                <span class="font-bold text-blue-300">Professional & Technical Services</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mission & Vision -->
+                    <div class="fade-in">
+                        <h4 class="text-3xl font-bold mb-8 gradient-text">Mission & Vision</h4>
+                        <div class="space-y-8">
+                            <div class="p-6 glass-effect rounded-2xl">
+                                <h5 class="text-xl font-bold text-blue-400 mb-4">🎯 Our Mission</h5>
+                                <p class="text-gray-300 leading-relaxed font-bold">
+                                    To revolutionize railway navigation by providing real-time, GPS-based indoor mapping solutions that eliminate station confusion and enhance the travel experience for all passengers.
+                                </p>
+                            </div>
+                            <div class="p-6 glass-effect rounded-2xl">
+                                <h5 class="text-xl font-bold text-blue-400 mb-4">🚀 Our Vision</h5>
+                                <p class="text-gray-300 leading-relaxed font-bold">
+                                    To become India's leading digital mobility platform, empowering millions of travelers with smart navigation solutions that support the nation's Digital India initiative.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Key Features -->
+                <div class="fade-in mb-16">
+                    <h4 class="text-3xl font-bold mb-8 text-center gradient-text">TrackMap Platform Features</h4>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center p-6 glass-effect rounded-2xl">
+                            <div class="text-4xl mb-4">📍</div>
+                            <h5 class="text-xl font-bold text-blue-400 mb-3">Real-time Navigation</h5>
+                            <p class="text-gray-300 text-sm font-bold">GPS-based indoor mapping for precise station navigation</p>
+                        </div>
+                        <div class="text-center p-6 glass-effect rounded-2xl">
+                            <div class="text-4xl mb-4">♿</div>
+                            <h5 class="text-xl font-bold text-blue-400 mb-3">Accessibility Focus</h5>
+                            <p class="text-gray-300 text-sm font-bold">Designed for seniors, tourists, and differently-abled travelers</p>
+                        </div>
+                        <div class="text-center p-6 glass-effect rounded-2xl">
+                            <div class="text-4xl mb-4">🇮🇳</div>
+                            <h5 class="text-xl font-bold text-blue-400 mb-3">Digital India</h5>
+                            <p class="text-gray-300 text-sm font-bold">Supporting India's Smart Mobility and Digital transformation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Registered Address -->
+                <div class="fade-in text-center p-8 glass-effect rounded-2xl">
+                    <h4 class="text-2xl font-bold mb-4 gradient-text">Corporate Headquarters</h4>
+                    <p class="text-lg text-gray-300 font-bold">
+                        📍 Ghuskul Kalibagh, Bettiah, West Champaran, Bihar - 845438, India
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding corporate-gradient relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-cyan-600 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20 fade-in">
+                <div class="text-lg font-semibold text-blue-400 mb-4 tracking-wider">BUSINESS INQUIRIES</div>
+                <h2 class="text-5xl md:text-6xl font-black mb-8 text-white text-shadow">Let's Connect</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+                <p class="text-xl text-gray-200 mt-8 max-w-3xl mx-auto">
+                    Ready to transform your business with innovative solutions? Let's discuss how Trackmap Innovations can drive your success forward.
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="corporate-card rounded-3xl p-8 md:p-16 corporate-shadow">
+                    <div class="fade-in">
+                        <!-- Contact Header -->
+                        <div class="text-center mb-16">
+                            <div class="w-24 h-24 company-logo rounded-2xl flex items-center justify-center text-4xl mx-auto mb-8 floating-animation">
+                                💼
+                            </div>
+                            <h3 class="text-4xl font-black mb-6 gradient-text">Business Partnership</h3>
+                            <p class="text-xl text-gray-300">
+                                Connect with Vishal Kumar for strategic partnerships, investment opportunities, and innovative collaborations.
+                            </p>
+                        </div>
+                        
+                        <!-- Contact Methods -->
+                        <div class="grid md:grid-cols-2 gap-12 mb-16">
+                            <div class="text-center p-8 glass-effect rounded-3xl professional-card">
+                                <div class="w-20 h-20 professional-icon rounded-2xl flex items-center justify-center text-4xl mx-auto mb-6">📧</div>
+                                <h4 class="text-2xl font-bold mb-4 gradient-text">Email Communication</h4>
+                                <p class="text-gray-400 mb-4">Direct Business Inquiries</p>
+                                <p class="text-xl font-bold text-blue-300 mb-6">vishu42@gmail.com</p>
+                                <div class="flex justify-center space-x-2">
+                                    <span class="px-3 py-1 bg-blue-600 bg-opacity-30 rounded-full text-xs font-medium text-blue-300">24/7 Response</span>
+                                    <span class="px-3 py-1 bg-blue-600 bg-opacity-30 rounded-full text-xs font-medium text-blue-300">Professional</span>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center p-8 glass-effect rounded-3xl professional-card">
+                                <div class="w-20 h-20 professional-icon rounded-2xl flex items-center justify-center text-4xl mx-auto mb-6">📱</div>
+                                <h4 class="text-2xl font-bold mb-4 gradient-text">Direct Contact</h4>
+                                <p class="text-gray-400 mb-4">Immediate Business Discussions</p>
+                                <p class="text-xl font-bold text-blue-300 mb-6">+91 7903242943</p>
+                                <div class="flex justify-center space-x-2">
+                                    <span class="px-3 py-1 bg-green-600 bg-opacity-30 rounded-full text-xs font-medium text-green-300">WhatsApp</span>
+                                    <span class="px-3 py-1 bg-green-600 bg-opacity-30 rounded-full text-xs font-medium text-green-300">Voice Calls</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Call to Action Buttons -->
+                        <div class="text-center mb-12">
+                            <div class="flex justify-center">
+                                <a href="mailto:vishu42@gmail.com" class="corporate-button text-white px-12 py-6 rounded-2xl font-bold text-lg tracking-wide">
+                                    GET IN TOUCH
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Hours & Location -->
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="text-center p-6 glass-effect rounded-2xl">
+                                <h5 class="text-xl font-bold text-blue-400 mb-4">🕒 Business Hours</h5>
+                                <p class="text-gray-300">Monday - Saturday: 9:00 AM - 8:00 PM IST</p>
+                                <p class="text-gray-300">Sunday: Available for urgent matters</p>
+                            </div>
+                            <div class="text-center p-6 glass-effect rounded-2xl">
+                                <h5 class="text-xl font-bold text-blue-400 mb-4">📍 Headquarters</h5>
+                                <p class="text-gray-300">Bettiah, West Champaran</p>
+                                <p class="text-gray-300">Bihar, India - 845438</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Professional Note -->
+                        <div class="mt-12 text-center p-8 glass-effect rounded-2xl">
+                            <p class="text-lg text-gray-300 italic">
+                                "Innovation distinguishes between a leader and a follower. Let's build the future together."
+                            </p>
+                            <p class="text-blue-400 font-semibold mt-4">- Vishal Kumar, Founder & CEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <!-- Company Info -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-3 mb-6">
+                        <div class="w-12 h-12 company-logo rounded-xl flex items-center justify-center text-white font-bold text-xl">TM</div>
+                        <div>
+                            <div class="text-xl font-bold gradient-text">Trackmap Innovations</div>
+                            <div class="text-xs text-gray-400 font-medium">Private Limited</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Pioneering the future of railway navigation through innovative GPS-based solutions and digital transformation.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="text-center">
+                    <h4 class="text-xl font-bold text-blue-400 mb-6">Quick Navigation</h4>
+                    <div class="space-y-3">
+                        <a href="#home" class="block text-gray-400 hover:text-blue-400 transition-colors">Home</a>
+                        <a href="#about" class="block text-gray-400 hover:text-blue-400 transition-colors">About Vishal</a>
+                        <a href="#employees" class="block text-gray-400 hover:text-blue-400 transition-colors">Our Team</a>
+                        <a href="#company" class="block text-gray-400 hover:text-blue-400 transition-colors">Our Company</a>
+                        <a href="#contact" class="block text-gray-400 hover:text-blue-400 transition-colors">Contact Us</a>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="text-center md:text-right">
+                    <h4 class="text-xl font-bold text-blue-400 mb-6">Get In Touch</h4>
+                    <div class="space-y-3">
+                        <p class="text-gray-400">📧 vishu42@gmail.com</p>
+                        <p class="text-gray-400">📱 +91 7903242943</p>
+                        <p class="text-gray-400">📍 Bettiah, West Champaran, Bihar</p>
+                        <p class="text-gray-400">🏢 CIN: U74909BR2025PTC075493</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+                        &copy; 2025 Trackmap Innovations Pvt. Ltd. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <span class="text-gray-400 text-sm">Designed with 💙 for Innovation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add parallax effect to hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('#home');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // Add typing effect to hero title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect when page loads
+        window.addEventListener('load', () => {
+            const heroTitle = document.querySelector('#home h1');
+            if (heroTitle) {
+                const originalText = heroTitle.textContent;
+                setTimeout(() => {
+                    typeWriter(heroTitle, originalText, 50);
+                }, 1000);
+            }
+        });
+
+        // Add hover effects to skill cards
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add click ripple effect to buttons
+        document.querySelectorAll('a[class*="bg-"], a[class*="border-"]').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add CSS for ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(0);
+                animation: ripple-animation 0.6s linear;
+                pointer-events: none;
+            }
+            
+            @keyframes ripple-animation {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'977b72ee423da75f',t:'MTc1NjYzMTk5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
